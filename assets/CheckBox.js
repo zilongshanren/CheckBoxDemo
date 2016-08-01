@@ -6,9 +6,6 @@ var CheckBox = cc.Class({
     },
 
     properties: {
-        _spriteFrames: [],
-
-
         isChecked: {
             default: true,
             notify: function() {
@@ -65,6 +62,11 @@ var CheckBox = cc.Class({
             notify: function () {
                 this._updateSprites();
             }
+        },
+
+        checkEvents: {
+            default: [],
+            type: cc.Component.EventHandler
         }
     },
 
@@ -92,16 +94,26 @@ var CheckBox = cc.Class({
     onLoad: function () {
         this._updateSprites();
 
+
+        this._registerEvent();
+    },
+
+    _registerEvent: function () {
         var event = new cc.Component.EventHandler();
         event.target = this.node;
         event.component = 'CheckBox';
         event.handler = 'toggleCheckBoxStatus';
         this.clickEvents = [event];
+
+        //register checkbox specific event
+
     },
 
     toggleCheckBoxStatus: function () {
         this.isChecked = !this.isChecked;
     }
+
+
 
 });
 

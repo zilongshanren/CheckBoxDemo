@@ -11,13 +11,21 @@ Vue.component('cc-button', {
     <!--  <ui-prop indent=1 v-prop="target.pressedSprite"></ui-prop> -->
     <!--  <ui-prop indent=1 v-prop="target.disabledSprite"></ui-prop> -->
 
-    <ui-prop v-prop="target.activeNormalSprite"></ui-prop>
-    <ui-prop v-prop="target.activePressedSprite"></ui-prop>
-    <ui-prop v-prop="target.activeDisabledSprite"></ui-prop>
+    <ui-prop name="Checked State">
+      <div class="child">
+        <ui-prop indent=1 v-prop="target.activeNormalSprite"></ui-prop>
+        <ui-prop indent=1 v-prop="target.activePressedSprite"></ui-prop>
+        <ui-prop indent=1 v-prop="target.activeDisabledSprite"></ui-prop>
+      </div>
+    </ui-prop>
 
-    <ui-prop v-prop="target.inActiveNormalSprite"></ui-prop>
-    <ui-prop v-prop="target.inActivePressedSprite"></ui-prop>
-    <ui-prop v-prop="target.inActiveDisabledSprite"></ui-prop>
+    <ui-prop name="Unchecked State">
+      <div class="child">
+        <ui-prop indent=1 v-prop="target.inActiveNormalSprite"></ui-prop>
+        <ui-prop indent=1 v-prop="target.inActivePressedSprite"></ui-prop>
+        <ui-prop indent=1 v-prop="target.inActiveDisabledSprite"></ui-prop>
+      </div>
+    </ui-prop>
 
     <cc-array-prop :target.sync="target.clickEvents"></cc-array-prop>
   `,
