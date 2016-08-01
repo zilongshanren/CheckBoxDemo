@@ -1,4 +1,4 @@
-cc.Class({
+var CheckBox = cc.Class({
     extends: cc.Button,
     editor: CC_EDITOR && {
         inspector: 'packages://checkbox/checkbox-inspector.js',
@@ -19,6 +19,7 @@ cc.Class({
         inActiveNormalSprite: {
             default: null,
             type: cc.SpriteFrame,
+            displayName: 'inactiveNormalSprite',
             notify: function() {
                 this._updateSprites();
             }
@@ -43,6 +44,7 @@ cc.Class({
         inActivePressedSprite: {
             default: null,
             type: cc.SpriteFrame,
+            displayName: 'inactivePressedSprite',
             notify: function () {
                 this._updateSprites();
             }
@@ -59,6 +61,7 @@ cc.Class({
         inActiveDisabledSprite: {
             default: null,
             type: cc.SpriteFrame,
+            displayName: 'inactiveDisabledSprite',
             notify: function () {
                 this._updateSprites();
             }
@@ -72,13 +75,34 @@ cc.Class({
             this.disabledSprite = this.activeDisabledSprite;
         } else {
             this.normalSprite = this.inActiveNormalSprite;
-            this.normalSprite = this.inActivePressedSprite;
+            this.pressedSprite = this.inActivePressedSprite;
             this.disabledSprite = this.inActiveDisabledSprite;
         }
     },
 
-    // use this for initialization
-    onLoad: function () {
+    onEnable: function () {
+        this._super();
+
+        this.hoverSprite = null;
+        this.node.off(cc.Node.EventType.MOUSE_ENTER, this._onMouseMoveIn, this);
+        this.node.off(cc.Node.EventType.MOUSE_LEAVE, this._onMouseMoveOut, this);
     },
 
+    // use this for initialization
+    onLoad: function () {
+        this._updateSprites();
+
+        var event = new cc.Component.EventHandler();
+        event.target = this.node;
+        event.component = 'CheckBox';
+        event.handler = 'toggleCheckBoxStatus';
+        this.clickEvents = [event];
+    },
+
+    toggleCheckBoxStatus: function () {
+        this.isChecked = !this.isChecked;
+    }
+
 });
+
+cc.CheckBox = module.exports = CheckBox;

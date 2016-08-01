@@ -213,11 +213,9 @@
     },
     "duration": 0.1,
     "pressedSprite": {
-      "__uuid__": "9e28a72a-9686-4095-bcaf-5823a94888e4"
-    },
-    "hoverSprite": {
       "__uuid__": "7fcfb006-76fd-4142-81ff-4d1f5a066cc1"
     },
+    "hoverSprite": null,
     "clickEvents": [
       {
         "__id__": 7
@@ -270,9 +268,11 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
-    "component": "",
-    "handler": ""
+    "target": {
+      "__id__": 5
+    },
+    "component": "CheckBox",
+    "handler": "toggleCheckBoxStatus"
   },
   {
     "__type__": "cc.Sprite",
@@ -557,7 +557,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 40,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
