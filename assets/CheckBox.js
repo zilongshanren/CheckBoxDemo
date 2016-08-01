@@ -91,11 +91,14 @@ var CheckBox = cc.Class({
 
     },
 
+
     // use this for initialization
     onLoad: function () {
+    	this.transition = cc.Button.Transition.SPRITE; //use sprite transition mode
+
         this._updateSprites();
 
-        this._registerEvent();
+        this._registerCheckBoxEvent();
     },
 
     //this method override the parent method...

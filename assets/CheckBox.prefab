@@ -55,13 +55,39 @@
         "__id__": 2
       },
       {
-        "__id__": 4
+        "__id__": 3
       }
     ],
     "_prefab": {
       "__id__": 5
     },
     "groupIndex": 0
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_spriteFrame": {
+      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_atlas": null
   },
   {
     "__type__": "3f550uUyDdIYYbpOD2skGrm",
@@ -74,16 +100,16 @@
     "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
-      "r": 206,
-      "g": 100,
-      "b": 100,
+      "r": 211,
+      "g": 211,
+      "b": 211,
       "a": 255
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 163,
-      "g": 33,
-      "b": 33,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "duration": 0.1,
@@ -93,7 +119,7 @@
     "hoverSprite": null,
     "clickEvents": [
       {
-        "__id__": 3
+        "__id__": 4
       }
     ],
     "_N$interactable": true,
@@ -148,32 +174,6 @@
     },
     "component": "CheckBox",
     "handler": "toggleCheckBoxStatus"
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
-    },
-    "_type": 0,
-    "_sizeMode": 1,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_atlas": null
   },
   {
     "__type__": "cc.PrefabInfo",
