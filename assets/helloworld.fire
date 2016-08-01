@@ -39,10 +39,10 @@
         "__id__": 5
       },
       {
-        "__id__": 8
+        "__id__": 9
       },
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
     "_localZOrder": 0,
@@ -166,8 +166,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 583,
-      "y": 433
+      "x": 564,
+      "y": 424
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -182,7 +182,7 @@
         "__id__": 6
       },
       {
-        "__id__": 7
+        "__id__": 8
       }
     ],
     "_prefab": null,
@@ -218,7 +218,11 @@
     "hoverSprite": {
       "__uuid__": "7fcfb006-76fd-4142-81ff-4d1f5a066cc1"
     },
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 7
+      }
+    ],
     "_N$interactable": true,
     "_N$normalColor": {
       "__type__": "cc.Color",
@@ -235,14 +239,40 @@
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "d670970d-f126-4886-a5b7-9de05980a3f0"
+      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
     },
     "_N$disabledSprite": {
       "__uuid__": "57764b40-3119-4e43-b017-27bd8df190ce"
     },
     "_N$target": {
       "__id__": 5
+    },
+    "_spriteFrames": [],
+    "_N$isChecked": true,
+    "_N$inActiveNormalSprite": {
+      "__uuid__": "d670970d-f126-4886-a5b7-9de05980a3f0"
+    },
+    "_N$activeNormalSprite": {
+      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
+    },
+    "_N$activePressedSprite": {
+      "__uuid__": "7fcfb006-76fd-4142-81ff-4d1f5a066cc1"
+    },
+    "_N$inActivePressedSprite": {
+      "__uuid__": "9e28a72a-9686-4095-bcaf-5823a94888e4"
+    },
+    "_N$activeDisabledSprite": {
+      "__uuid__": "57764b40-3119-4e43-b017-27bd8df190ce"
+    },
+    "_N$inActiveDisabledSprite": {
+      "__uuid__": "085101ff-28c0-46dc-8721-b7dd4658b6b7"
     }
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": null,
+    "component": "",
+    "handler": ""
   },
   {
     "__type__": "cc.Sprite",
@@ -253,7 +283,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "d670970d-f126-4886-a5b7-9de05980a3f0"
+      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -316,10 +346,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 9
+        "__id__": 10
       },
       {
-        "__id__": 10
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -330,7 +360,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 9
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -356,7 +386,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 9
     },
     "_enabled": true,
     "transition": 2,
@@ -404,7 +434,7 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 8
+      "__id__": 9
     }
   },
   {
@@ -435,7 +465,7 @@
     },
     "_children": [
       {
-        "__id__": 12
+        "__id__": 13
       }
     ],
     "_rotationX": 0,
@@ -457,10 +487,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 14
+        "__id__": 15
       },
       {
-        "__id__": 15
+        "__id__": 16
       }
     ],
     "_prefab": null,
@@ -480,7 +510,7 @@
     },
     "_cascadeOpacityEnabled": true,
     "_parent": {
-      "__id__": 11
+      "__id__": 12
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -512,7 +542,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
     "_prefab": null,
@@ -523,7 +553,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -543,7 +573,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 11
+      "__id__": 12
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -569,7 +599,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 11
+      "__id__": 12
     },
     "_enabled": true,
     "transition": 2,
@@ -617,7 +647,7 @@
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
     },
     "_N$target": {
-      "__id__": 11
+      "__id__": 12
     }
   }
 ]
