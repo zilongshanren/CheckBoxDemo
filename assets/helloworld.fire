@@ -129,6 +129,9 @@
     "_enabled": true,
     "checkBox": {
       "__id__": 5
+    },
+    "prefab": {
+      "__uuid__": "b6664de1-4e7b-4d3a-be62-95b9e64e1449"
     }
   },
   {
@@ -242,8 +245,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 500.6,
-      "y": 409.5
+      "x": 380,
+      "y": 517
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -345,7 +348,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "b6145xEdB9BrKguqg85ZVBe",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 12
