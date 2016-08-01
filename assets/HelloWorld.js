@@ -2,19 +2,34 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        label: {
+        checkBox: {
             default: null,
-            type: cc.Label
-        },
-        text: 'Hello, World!'
+            type: require("./CheckBox.js")
+        }
     },
 
     // use this for initialization
     onLoad: function () {
+        this.checkBox.node.on('check-event', this.onCheckBoxChecked2);
+
+        //create a checkbox with code
     },
 
-    // called every frame
-    update: function (dt) {
-
+    onCheckBoxChecked2: function (sender) {
+        var checkbox = sender.detail;
+        if(checkbox.isChecked) {
+            cc.log("checkBox is checked.");
+        } else {
+            cc.log("checkBox is unchecked.");
+        }
     },
+
+    onCheckBoxChecked1: function (checkBox) {
+        if(checkBox.isChecked) {
+            cc.log("checkBox is checked.");
+        } else {
+            cc.log("checkBox is unchecked.");
+        }
+    }
+
 });

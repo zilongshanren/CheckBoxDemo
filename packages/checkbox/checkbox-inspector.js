@@ -7,10 +7,6 @@ Vue.component('cc-button', {
 
     <ui-prop v-prop="target.isChecked"></ui-prop>
 
-    <!-- <ui-prop indent=1 v-prop="target.normalSprite"></ui-prop> -->
-    <!--  <ui-prop indent=1 v-prop="target.pressedSprite"></ui-prop> -->
-    <!--  <ui-prop indent=1 v-prop="target.disabledSprite"></ui-prop> -->
-
     <ui-prop name="Checked State">
       <div class="child">
         <ui-prop indent=1 v-prop="target.activeNormalSprite"></ui-prop>
@@ -27,7 +23,7 @@ Vue.component('cc-button', {
       </div>
     </ui-prop>
 
-    <cc-array-prop :target.sync="target.clickEvents"></cc-array-prop>
+    <cc-array-prop :target.sync="target.checkEvents"></cc-array-prop>
   `,
 
   props: {
