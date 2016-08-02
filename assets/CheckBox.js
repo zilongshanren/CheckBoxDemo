@@ -84,23 +84,15 @@ var CheckBox = cc.Class({
         if(this.isChecked) {
             this.normalSprite = this.activeNormalSprite;
             this.pressedSprite = this.activePressedSprite;
+            this.hoverSprite = this.activeNormalSprite;
             this.disabledSprite = this.activeDisabledSprite;
         } else {
             this.normalSprite = this.inActiveNormalSprite;
             this.pressedSprite = this.inActivePressedSprite;
+            this.hoverSprite = this.inActiveNormalSprite;
             this.disabledSprite = this.inActiveDisabledSprite;
         }
     },
-
-    onEnable: function () {
-        this._super();
-
-        this.hoverSprite = null;
-        this.node.off(cc.Node.EventType.MOUSE_ENTER, this._onMouseMoveIn, this);
-        this.node.off(cc.Node.EventType.MOUSE_LEAVE, this._onMouseMoveOut, this);
-
-    },
-
 
     // use this for initialization
     onLoad: function () {
