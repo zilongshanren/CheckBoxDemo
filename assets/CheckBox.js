@@ -6,6 +6,17 @@ var CheckBox = cc.Class({
     },
 
     properties: {
+        toggleGroup: {
+            default: null,
+            type: require('./ToggleGroup'),
+            notify: function (oldValue) {
+                if(this.toggleGroup) {
+                    this.toggleGroup.addToggle(this);
+                } else {
+                    oldValue.removeToggle(this);
+                }
+            }
+        },
         isChecked: {
             default: true,
             notify: function() {
@@ -113,14 +124,29 @@ var CheckBox = cc.Class({
     },
 
     toggleCheckBoxStatus: function () {
+        if(this.toggleGroup && this.isChecked) {
+            return;
+        }
         this.isChecked = !this.isChecked;
+
 
         this.node.emit('check-event', this);
         if(this.checkEvents) {
             cc.Component.EventHandler.emitEvents(this.checkEvents, this);
         }
-    }
 
+        if(this.toggleGroup) {
+            this.toggleGroup.updateToggles(this);
+        }
+    },
+
+    check: function () {
+        this.isChecked = true;
+    },
+
+    uncheck: function () {
+        this.isChecked = false;
+    }
 
 
 });
