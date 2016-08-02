@@ -1,8 +1,5 @@
 var ToggleGroup = cc.Class({
     extends: cc.Component,
-    editor: CC_EDITOR && {
-        executeInEditMode: true
-    },
 
     properties: {
         _toggleLists : []
@@ -29,6 +26,24 @@ var ToggleGroup = cc.Class({
             }
         });
     },
+
+
+    _allowOnlyOneToggleChecked: function () {
+        var isChecked = false;
+        this._toggleLists.forEach(function (item) {
+            if(isChecked) {
+                item.isChecked = false;
+            }
+            if (item.isChecked) {
+                isChecked = true;
+            }
+        });
+    },
+
+    onLoad: function () {
+        //only allow one toggle to be checked
+        this._allowOnlyOneToggleChecked();
+    }
 
 
 });
