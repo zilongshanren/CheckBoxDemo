@@ -864,7 +864,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Sprite",
+    "_name": "bgSprite",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -880,13 +880,13 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 40,
-      "height": 36
+      "width": 960,
+      "height": 640
     },
     "_children": [],
     "_rotationX": 0,
@@ -895,8 +895,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 234,
-      "y": 537
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -922,11 +922,9 @@
       "__id__": 24
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
-    },
+    "_spriteFrame": null,
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -1016,7 +1014,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -1049,7 +1047,7 @@
       "__uuid__": "7fcfb006-76fd-4142-81ff-4d1f5a066cc1"
     },
     "hoverSprite": {
-      "__uuid__": "7fcfb006-76fd-4142-81ff-4d1f5a066cc1"
+      "__uuid__": "e672756d-f535-4c84-96f9-b1ff522e02c0"
     },
     "clickEvents": [],
     "_N$interactable": true,

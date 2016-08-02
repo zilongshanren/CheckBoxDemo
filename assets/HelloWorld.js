@@ -20,11 +20,11 @@ cc.Class({
 
     start: function () {
         //create a checkbox with code
-        this._anotherCheckBox = cc.instantiate(this.prefab);
-        this._anotherCheckBox.position = cc.p(80, 80);
+        // this._anotherCheckBox = cc.instantiate(this.prefab);
+        // this._anotherCheckBox.position = cc.p(80, 80);
 
-       this.node.addChild(this._anotherCheckBox);
-       this._anotherCheckBox.on('check-event', this.onCheckBoxChecked2);
+        // this.node.addChild(this._anotherCheckBox);
+        // this._anotherCheckBox.on('check-event', this.onCheckBoxChecked2);
 
     },
 

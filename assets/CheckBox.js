@@ -141,10 +141,21 @@ var CheckBox = cc.Class({
     },
 
     check: function () {
+        if(this.toggleGroup && this.isChecked) {
+            return;
+        }
+
         this.isChecked = true;
+        if(this.toggleGroup) {
+            this.toggleGroup.updateToggles(this);
+        }
     },
 
     uncheck: function () {
+        if(this.toggleGroup && this.isChecked) {
+            return;
+        }
+
         this.isChecked = false;
     }
 
