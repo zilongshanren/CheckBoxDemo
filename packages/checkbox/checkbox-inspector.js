@@ -5,8 +5,6 @@ Vue.component('cc-button', {
     <ui-prop v-prop="target.target"></ui-prop>
     <ui-prop v-prop="target.interactable"></ui-prop>
 
-    <ui-prop v-prop="target.toggleGroup"></ui-prop>
-
     <ui-prop v-prop="target.isChecked"></ui-prop>
 
     <ui-prop name="Checked State">

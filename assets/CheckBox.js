@@ -5,23 +5,14 @@ var CheckBox = cc.Class({
     },
 
     properties: {
-        toggleGroup: {
-            default: null,
-            type: require('./ToggleGroup'),
-            notify: function (oldValue) {
-                if(this.toggleGroup) {
-                    this.toggleGroup.addToggle(this);
-                } else {
-                    oldValue.removeToggle(this);
-                }
-            }
-        },
         isChecked: {
             default: true,
             notify: function() {
                 this._updateSprites();
             }
         },
+
+        _toggleGroup: null,
 
         inActiveNormalSprite: {
             default: null,
@@ -101,12 +92,6 @@ var CheckBox = cc.Class({
         this._registerCheckBoxEvent();
     },
 
-    onDestroy: function () {
-        if(this.toggleGroup) {
-            this.toggleGroup.removeToggle(this);
-        }
-    },
-
     //this method override the parent method...
     _registerCheckBoxEvent: function () {
         //register checkbox specific event
@@ -119,7 +104,7 @@ var CheckBox = cc.Class({
     },
 
     toggleCheckBoxStatus: function () {
-        if(this.toggleGroup && this.isChecked) {
+        if(this._toggleGroup && this.isChecked) {
             return;
         }
         this.isChecked = !this.isChecked;
@@ -130,24 +115,24 @@ var CheckBox = cc.Class({
             cc.Component.EventHandler.emitEvents(this.checkEvents, this);
         }
 
-        if(this.toggleGroup) {
-            this.toggleGroup.updateToggles(this);
+        if(this._toggleGroup) {
+            this._toggleGroup.updateToggles(this);
         }
     },
 
     check: function () {
-        if(this.toggleGroup && this.isChecked) {
+        if(this._toggleGroup && this.isChecked) {
             return;
         }
 
         this.isChecked = true;
-        if(this.toggleGroup) {
-            this.toggleGroup.updateToggles(this);
+        if(this._toggleGroup) {
+            this._toggleGroup.updateToggles(this);
         }
     },
 
     uncheck: function () {
-        if(this.toggleGroup && this.isChecked) {
+        if(this._toggleGroup && this.isChecked) {
             return;
         }
 
