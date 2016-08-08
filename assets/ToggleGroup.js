@@ -14,13 +14,15 @@ var ToggleGroup = cc.Class({
         var index = this._toggleLists.indexOf(toggle);
         if (index > -1) {
             this._toggleLists.splice(index, 1);
+        } else {
+            cc.error('The toggle component is not exists!');
         }
     },
 
     updateToggles: function (toggle) {
         this._toggleLists.forEach(function (item){
             if(toggle.isChecked) {
-                if (item !== toggle && item.isChecked) {
+                if (item !== toggle && item.isChecked && item.enabled) {
                     item.isChecked = false;
                 }
             }
@@ -31,10 +33,10 @@ var ToggleGroup = cc.Class({
     _allowOnlyOneToggleChecked: function () {
         var isChecked = false;
         this._toggleLists.forEach(function (item) {
-            if(isChecked) {
+            if(isChecked && item.enabled) {
                 item.isChecked = false;
             }
-            if (item.isChecked) {
+            if (item.isChecked && item.enabled) {
                 isChecked = true;
             }
         });

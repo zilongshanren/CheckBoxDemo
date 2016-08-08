@@ -84,12 +84,10 @@ var CheckBox = cc.Class({
         if(this.isChecked) {
             this.normalSprite = this.activeNormalSprite;
             this.pressedSprite = this.activePressedSprite;
-            this.hoverSprite = this.activeNormalSprite;
             this.disabledSprite = this.activeDisabledSprite;
         } else {
             this.normalSprite = this.inActiveNormalSprite;
             this.pressedSprite = this.inActivePressedSprite;
-            this.hoverSprite = this.inActiveNormalSprite;
             this.disabledSprite = this.inActiveDisabledSprite;
         }
     },
@@ -101,6 +99,12 @@ var CheckBox = cc.Class({
         this._updateSprites();
 
         this._registerCheckBoxEvent();
+    },
+
+    onDestroy: function () {
+        if(this.toggleGroup) {
+            this.toggleGroup.removeToggle(this);
+        }
     },
 
     //this method override the parent method...
